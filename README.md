@@ -61,7 +61,14 @@ define(['app','service/viewclientinfoservice'], function (app) {
 	}
 }
 
+In AngularJS, services are reusable singleton objects that are used to organize and share code across our app. 
+They can be injected into controllers, filters, directives. AngularJS provides us three ways : service, factory and provider to create a service. I have used factory to create my service as shown below :
 
+define(['angularAMD'], function (angularAMD) {
+	angularAMD.factory('ViewClientInfo', function ($http,$q) {
+	....
+	}
+}
 
 
 

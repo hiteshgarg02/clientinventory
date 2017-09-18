@@ -1,0 +1,9 @@
+<div data-ng-controller="countrySelectionController">
+
+Select Country : 
+<br/><br/>
+<select data-ng-options="item as item.description for item in countryselection" data-ng-model="ctryselection" data-ng-change="ctrySelected(ctryselection)" id="selectedCtry" aria-invalid="false" aria-required="true" required>
+						<option value="S">Select</option>					
+</select>
+					
+</div>

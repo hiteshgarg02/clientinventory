@@ -47,5 +47,22 @@ To use the country selection template we need to add the following statement in 
 
 This will help us add the directive inside the view and can be reused in different screens.
 
+Concept of Dependency Injection Using services
+
+Dependency injection is a technique whereby one object supplies the dependencies of another object. A dependency is an object that can be used (a service). An injection is the passing of a dependency to a dependent object (a client) that would use it. AngularJS services are substitutable objects that are wired together using dependency injection (DI). You can use services to organize and share code across your app. AngularJS services are: Lazily instantiated – AngularJS only instantiates a service when an application component depends on it.
+
+I have created one service as "ViewClientInfo" where i have written the implementation to get the client data.This service can be used in any page wherever its being required and can be injected within it.
+
+Below its being shown how i have injected the service"ViewClientInfo" in the controller "viewclientinfocontroller" :
+
+define(['app','service/viewclientinfoservice'], function (app) {
+	app.controller('viewclientinfocontroller', ['$scope', '$http','ViewClientInfo', function($scope, $http,ViewClientInfo) { 
+	....
+	}
+}
+
+
+
+
 
 
